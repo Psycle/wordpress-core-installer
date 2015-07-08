@@ -1,5 +1,5 @@
 {
-	"name"             : "johnpbloch/wordpress-core-installer",
+	"name"             : "james-robinson/wordpress-core-installer",
 	"description"      : "A custom installer to handle deploying WordPress with composer",
 	"keywords"         : ["wordpress"],
 	"type"             : "composer-plugin",
@@ -13,11 +13,11 @@
 	],
 	"autoload"         : {
 		"psr-0": {
-			"johnpbloch\\Composer\\": "src/"
+			"james-robinson\\Composer\\": "src/"
 		}
 	},
 	"extra"            : {
-		"class": "johnpbloch\\Composer\\WordPressCorePlugin"
+		"class": "james-robinson\\Composer\\WordPressCorePlugin"
 	},
 	"require"          : {
 		"composer-plugin-api": "^1.0"
