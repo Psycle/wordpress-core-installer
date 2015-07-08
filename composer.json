@@ -1,5 +1,5 @@
 {
-	"name"             : "james-robinson/wordpress-core-installer",
+	"name"             : "wordpress/wordpress-core-installer",
 	"description"      : "A custom installer to handle deploying WordPress with composer",
 	"keywords"         : ["wordpress"],
 	"type"             : "composer-plugin",
@@ -9,6 +9,10 @@
 		{
 			"name" : "John P. Bloch",
 			"email": "me@johnpbloch.com"
+		},
+		{
+			"name" : "James Robinson",
+			"email": "james.robinson@psycle.com"
 		}
 	],
 	"autoload"         : {
