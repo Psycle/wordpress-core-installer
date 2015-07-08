@@ -1,6 +1,6 @@
 <?php
 
-namespace johnpbloch\Composer;
+namespace psycle\Composer;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
