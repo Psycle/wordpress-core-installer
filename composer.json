@@ -1,5 +1,5 @@
 {
-	"name"             : "wordpress/wordpress-core-installer",
+	"name"             : "psycle-wordpress/wordpress-core-installer",
 	"description"      : "A custom installer to handle deploying WordPress with composer",
 	"keywords"         : ["wordpress"],
 	"type"             : "composer-plugin",
