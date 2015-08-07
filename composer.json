@@ -15,6 +15,9 @@
 			"email": "james.robinson@psycle.com"
 		}
 	],
+	"replace": {
+		"johnpbloch/wordpress-core-installer": "*"
+	},
 	"autoload"         : {
 		"psr-0": {
 			"psycle\\Composer\\": "src/"
