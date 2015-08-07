@@ -1,5 +1,5 @@
 # WordPress Core Installer
-This is a [custom Composer installer](http://getcomposer.org/doc/articles/custom-installers.md) for WordPress core. It is a proof of concept, but feel free to use it. The package is on [packagist](http://packagist.org) and the package name is `johnpbloch/wordpress-core-installer`.
+This is a [custom Composer installer](http://getcomposer.org/doc/articles/custom-installers.md) for WordPress core. It is a proof of concept, but feel free to use it. The package is on [packagist](http://packagist.org) and the package name is `psycle-wordpress/wordpress-core-installer`.
 
 ### Usage
 To set up a custom WordPress build package to use this as a custom installer, add the following to your package's composer file:
@@ -7,7 +7,7 @@ To set up a custom WordPress build package to use this as a custom installer, ad
 ```
 "type": "wordpress-core",
 "require": {
-	"johnpbloch/wordpress-core-installer": "~0.1"
+	"psycle-wordpress/wordpress-core-installer": "~0.1"
 }
 ```
 
@@ -25,7 +25,7 @@ The root composer package can also declare custom paths as an object keyed by pa
 "extra": {
 	"wordpress-install-dir": {
 		"wordpress/wordpress": "wordpress",
-		"johnpbloch/wordpress": "jpb-wordpress"
+		"psycle-wordpress/wordpress": "psy-wordpress"
 	}
 }
 ```
