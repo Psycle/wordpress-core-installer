@@ -33,6 +33,15 @@ class WordPressCoreInstaller extends LibraryInstaller {
 		if ( ! $installationDir ) {
 			$installationDir = 'wordpress';
 		}
+		
+		// If we are replacing the package then we can override the install directory. Otherwise we'll throw an InvalidArgumentException later on.
+		if(isset(self::$_installedPaths[$installationDir])) {
+			$replacements = $package->getReplaces();
+			if(array_key_exists(self::$_installedPaths[$installationDir], $replacements)) {
+				unset(self::$_installedPaths[$installationDir]);
+			}
+		}
+		
 		if (
 			! empty( self::$_installedPaths[$installationDir] ) &&
 			$prettyName !== self::$_installedPaths[$installationDir]
