@@ -61,7 +61,7 @@ class WordPressCorePlugin implements PluginInterface, EventSubscriberInterface {
 
 					foreach (new \DirectoryIterator($muPluginDirectory) AS $muBootstrapableFile) {
 						if($muBootstrapableFile->isFile() && preg_match( '@\.php$@', $muBootstrapableFile )) {
-							$relativeFilePath = '__DIR__ . "/' . $directoryNode->getFilename() . '/' . $muBootstrapableFile->getFilename() . '"';
+							$relativeFilePath = 'dirname(__FILE__) . "/' . $directoryNode->getFilename() . '/' . $muBootstrapableFile->getFilename() . '"';
 							file_put_contents($muBootstrapFile, '<?php if(file_exists('.$relativeFilePath.')) require_once('.$relativeFilePath.');');
 						}
 					}
