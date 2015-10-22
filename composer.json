@@ -7,10 +7,6 @@
 	"minimum-stability": "dev",
 	"authors"          : [
 		{
-			"name" : "John P. Bloch",
-			"email": "me@johnpbloch.com"
-		},
-		{
 			"name" : "James Robinson",
 			"email": "james.robinson@psycle.com"
 		}
@@ -27,7 +23,8 @@
 		"class": "psycle\\Composer\\WordPressCorePlugin"
 	},
 	"require"          : {
-		"composer-plugin-api": "^1.0"
+		"composer-plugin-api": "^1.0",
+		"composer/installers": "@stable"
 	},
 	"require-dev"      : {
 		"composer/composer": "1.0.*@dev"
