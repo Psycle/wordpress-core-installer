@@ -57,13 +57,12 @@ class WordPressCorePlugin implements PluginInterface, EventSubscriberInterface {
 			foreach ( new \DirectoryIterator($muInstallerPath) AS $directoryNode) {
 				if(!$directoryNode->isDot() && $directoryNode->isDir()) {
 					$muPluginDirectory = $directoryNode->getPathname();
+					$muPluginDirectoryName = basename($muPluginDirectory);
 					$muBootstrapFile = dirname($muPluginDirectory) . DIRECTORY_SEPARATOR .'_' . basename($muPluginDirectory) . '.php';
-
-					foreach (new \DirectoryIterator($muPluginDirectory) AS $muBootstrapableFile) {
-						if($muBootstrapableFile->isFile() && preg_match( '@\.php$@', $muBootstrapableFile )) {
-							$relativeFilePath = 'dirname(__FILE__) . DIRECTORY_SEPARATOR . "' . $directoryNode->getFilename() . '" . DIRECTORY_SEPARATOR . "' . $muBootstrapableFile->getFilename() . '"';
-							file_put_contents($muBootstrapFile, '<?php if(file_exists('.$relativeFilePath.')) require_once('.$relativeFilePath.');');
-						}
+					$muBootstrapableFile = $muPluginDirectory . DIRECTORY_SEPARATOR . basename($muPluginDirectory) . '.php';
+					if(file_exists($muBootstrapableFile)) {
+						$relativeFilePath = 'dirname(__FILE__) . DIRECTORY_SEPARATOR . "' . $directoryNode->getFilename() . '" . DIRECTORY_SEPARATOR . "' . basename($muBootstrapableFile) . '"';
+						file_put_contents($muBootstrapFile, '<?php if(file_exists('.$relativeFilePath.')) require_once('.$relativeFilePath.');');
 					}
 				}
 			}
