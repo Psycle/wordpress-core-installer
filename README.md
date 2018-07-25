@@ -1,3 +1,5 @@
+* This plugin is no longer mainained.  Use at your own risk.
+
 # WordPress Core Installer
 This is a [custom Composer installer](http://getcomposer.org/doc/articles/custom-installers.md) for WordPress core. It is a proof of concept, but feel free to use it. The package is on [packagist](http://packagist.org) and the package name is `psycle-wordpress/wordpress-core-installer`.
 
